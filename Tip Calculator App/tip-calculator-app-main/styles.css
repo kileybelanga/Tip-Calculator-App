@@ -1,0 +1,221 @@
+
+*{
+font-family: 'Space Mono', serif;
+font-size: 24px;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    padding: 10%;
+}
+
+body{
+    background-color: hsl(185, 41%, 84%);
+    padding: 10%;
+
+}
+main{
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding: 3%;
+    column-gap: 30px;
+    background-color: white;
+    border-radius: 20px;
+    border: 0;
+    box-shadow: 2px 2px 2px 1px hsl(189, 41%, 97%);
+}
+
+
+.calculator{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    justify-content: center;  
+    gap: 40px;
+    margin: 0;
+}
+
+.peoplecontainer{
+    display: flex;
+    flex-direction: column;
+    column-gap: 10;
+}
+div.numberofpeople{
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-end;
+}
+label {
+    color: hsl(186, 14%, 43%);
+    font-size: 15px;
+    margin: 0%;
+    align-self: center;
+}
+
+#error {
+    color: red;
+    font-size: 12px;
+    text-align: right;
+}
+
+
+
+
+input {
+    flex:1;
+    background-color: hsl(189, 41%, 97%);
+    border: none;
+    border-radius: 2px;
+    width: 100%;
+    text-align: right;
+    justify-content: space-between;
+}
+
+
+input:focus{
+    outline: none;
+}
+
+.bill-icon{
+    background-image: url(images/icon-dollar.svg);
+    background-position: left  10px center;
+    background-repeat: no-repeat;
+    padding-right: 10px;
+    
+}
+
+.people-icon{
+    background-image: url(images/icon-person.svg);
+    background-position: left  10px center;
+    background-repeat: no-repeat;
+    padding-right: 10px;
+
+}
+
+.percentages{
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);;
+ grid-template-rows: auto;
+ row-gap: 10%;
+ column-gap: 3%;
+ width: 100%;
+}
+
+button{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(183, 100%, 15%);
+    color:white;
+    border: 0;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+button:hover{
+    background-color: hsl(172, 67%, 45%);
+    color:hsl(183, 100%, 15%);
+}
+
+
+.custom{
+    background-color: hsl(189, 41%, 97%);
+    color:hsl(186, 14%, 43%);
+    font-size: 15px;
+    text-align: center;
+    padding: 0;
+}
+
+
+
+.results{
+    flex:1;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 20px;  
+    padding:5%;  
+}
+
+.results > div{
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    grid-template-rows: 25 25 50;
+    row-gap: 10px;
+}
+
+.results h1{
+    font-size: 18px;
+    color:white;
+    margin-bottom: -10px;
+    
+}
+
+.results p{
+    font-size: 12px;
+    color:hsl(184, 14%, 56%);
+}
+
+
+
+.tip{
+    color:hsl(172, 67%, 45%);
+    font-size: 50px;
+    text-align: right;
+}
+.tip:empty:not(:focus):before {
+	content: attr(data-text);
+}
+
+.total{
+    color:hsl(172, 67%, 45%);
+    font-size: 50px;
+    text-align: right;
+}
+.total:empty:not(:focus):before {
+	content: attr(data-text);
+}
+.reset-button{
+    padding-top: 25px;
+    display: grid;
+    grid-template-columns: 100%;
+}
+.reset-button > button:hover{
+    background-color: hsl(172, 67%, 45%);
+    color:hsl(183, 100%, 15%);
+}
+.results button {
+    background-color: hsl(172, 67%, 45%, 0.2);
+    color: hsl(183, 100%, 15%);
+    grid-column: span 2;  
+}
+/* footer */
+.attribution { 
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 11px; 
+    text-align: center; 
+    padding-top:20px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    font-size: 11px; 
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;}
+
+
+@media only screen and (max-width: 600px) {
+    main {
+      gap: 20px;
+      padding: 20px;
+    }
+    .percentages{
+        grid-template-columns: repeat(2, 1fr);;
+        grid-template-rows: auto;
+       }
+
+       .reset{
+        padding-top: 20px;
+       }
+  }

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+  
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<script src="script.js" defer></script>
+</head>
+<body>
+ <header>
+<img src="images/logo.svg"/>
+</header> 
+<main>
+  <section class="calculator">
+<div>
+  <form id = "tipForm">
+  <label for="bill">Bill</label><br>
+  <input 
+    class = "bill-icon" 
+    onkeyup="calculateBill(), calculateTip()" 
+    type="text" 
+    id="billTotalInput" 
+    name="bill"
+    placeholder="0"
+    >
+    
+</div>
+<div class = calculations>
+<label for =tip>Select Tip %</label><br>
+<div class="percentages">
+<button 
+id="tipButtonOne" 
+name="fivePercent" 
+value="5" 
+onclick="calculateBill(this.id), calculateTip(this.id)">5%</button>
+<button 
+id="tipButtonTwo" 
+name="tenPercent" 
+value="10"
+onclick="calculateBill(this.id), calculateTip(this.id)">10%</button>
+<button 
+id="tipButtonThree" 
+name="fiftenPercent" 
+value="15"
+onclick="calculateBill(this.id), calculateTip(this.id)">15%</button>
+<button 
+id="tipButtonFour" 
+name="twentyfivePercent" 
+value="25"
+onclick="calculateBill(this.id), calculateTip(this.id)">25%</button>
+<button 
+id="tipButtonFive" 
+name="fiftyPercent" 
+value="50"
+onclick="calculateBill(this.id), calculateTip(this.id)">50%</button>
+<input 
+  onkeyup="calculateBill(), calculateTip()"
+  type = "text"
+  class="custom" 
+  id="customTipInput" 
+  name="customTipInput"
+  placeholder="Custom"
+/>
+</div>
+</div>
+<div class="peoplecontainer">
+ <div class = numberofpeople>
+<label for="people">Number of People</label>
+<div id="error"></div>
+</div>
+<input 
+  class ="people-icon"
+  onkeyup="calculateBill(), calculateTip(), errorMessage()"
+  type="text" 
+  id="numberOfPeople" 
+  name="people"
+  placeholder ="0"
+  />
+</div>
+
+</form>
+</section>
+
+<section class="results">
+<div>
+ <div>
+<h1>Tip Amount</h1>
+<p>/ person</p>
+</div>  
+<div class="tip" 
+id="perPersonTip"
+data-text="$0.00"></div>
+<div> 
+<h1>Total</h1>
+<p>/ person</p>
+</div> 
+<div 
+class="total" 
+id="perPersonTotal" 
+data-text="$0.00"></div>
+</div>
+<div class="reset-button"
+class="reset" 
+id="tip-reset"
+>
+</div>
+<div class = reset-button>
+<button
+onclick="resetForm()">
+  RESET
+</button>
+</div>
+
+</section>
+
+</main>
+<footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Kiley Belanga</a>
+  </foot>
+  </div>
+</body>
+</html>
