@@ -29,15 +29,15 @@ Users should be able to:
 
 ### Screenshot
 Desktop
-![](./images/Tip%20Calculator%20Desktop.png.jpg)
+![](./images/Tip%20Calculator%20Desktop.png)
 Mobile
 ![](./images/Tip%20Calculator%20Mobile.png)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://github.com/kileybelanga/Tip-Calculator-App/tree/main/Tip%20Calculator%20App/tip-calculator-app-main
+- Live Site URL: (https://htmlpreview.github.io/?https://github.com/kileybelanga/Tip-Calculator-App/blob/main/Tip%20Calculator%20App/tip-calculator-app-main/index.html)
 
 ## My process
 
