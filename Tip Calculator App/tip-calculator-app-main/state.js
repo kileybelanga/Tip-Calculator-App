@@ -1,5 +1,5 @@
 export const state = {
-    billInput: undefined,
-    tipPorcentage: undefined,
-    numberOfPeople: undefined,
+    billInput: 0,
+    tipPorcentage: 0,
+    numberOfPeople: 0,
 }

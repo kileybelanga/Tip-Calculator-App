@@ -1,19 +1,23 @@
 import { state } from "./state.js"
 
 export function calculus() {
-    const tip = state.tipPorcentage;
-    const bill = state.billInput;
-    const people = state.numberOfPeople;
+    const tip = Number(state.tipPorcentage),
+        bill = Number(state.billInput),
+        people = Number(state.numberOfPeople);
 
-    const tipPercentage = tip / 100
-    const tipAmount = bill * tipPercentage
-    const total = tipAmount + bill
+    const tipPorcentage = tip / 100,
+        tipAmount = bill * tipPorcentage,
+        total = tipAmount + bill
 
-    const totalPerPerson = total / people
-    const tipPerPerson = tipAmount / people
+    const totalPerPerson = total / people,
+        tipPerPerson = tipAmount / people
 
-    if (totalPerPerson > 0) {
-        console.log(totalPerPerson.toFixed(2))
+    if (totalPerPerson > 0 && totalPerPerson !== Infinity) {
+        // I use .toFixed into this scope to prevent validation fail,
+        // If we use .toFixed out of this scope Infinityis bypassed.
+        const tipPerPersonFixedAt2 = tipPerPerson.toFixed(2),
+            totalPerPersonFixedAt2 = totalPerPerson.toFixed(2);
+        
+        return { tipPerPersonFixedAt2, totalPerPersonFixedAt2 }
     }
-
 }
