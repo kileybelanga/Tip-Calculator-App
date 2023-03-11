@@ -29,13 +29,18 @@ function calculateBill (id){
     } else {
         tip = Number(customTipInputDiv.value);
     }
-    event.preventDefault();
+    // event.preventDefault();
+
 
     const tipPercentage = tip / 100
     const tipAmount = bill * tipPercentage
     const total = tipAmount + bill
     const totalPerPerson = total / people
-    perPersonTotalDiv.innerHTML = `$${totalPerPerson.toFixed(2)}`
+
+    if(people > 0) {
+        perPersonTotalDiv.innerHTML = `$${totalPerPerson.toFixed(2)}`
+    }
+
 };
 
 
@@ -60,7 +65,10 @@ function calculateTip (id){
     const tipPercentage = tip / 100
     const tipAmount = bill * tipPercentage
     const tipPerPerson = tipAmount / people
-    perPersonTipDiv.innerHTML = `$${tipPerPerson.toFixed(2)}`
+
+    if(people > 0) {
+        perPersonTipDiv.innerHTML = `$${tipPerPerson.toFixed(2)}`
+    }
 };
 
  
