@@ -8,7 +8,7 @@ export function insertResults() {
     const {tipPerPersonFixedAt2 , totalPerPersonFixedAt2 } = calculus() || {};
 
     if(tipPerPersonFixedAt2 !== undefined && totalPerPersonFixedAt2 !== undefined) {
-        $perPersonTotalContainer.textContent = totalPerPersonFixedAt2;
-        $perPersonTipContainer.textContent = tipPerPersonFixedAt2;
+        $perPersonTotalContainer.textContent = '$' + totalPerPersonFixedAt2;
+        $perPersonTipContainer.textContent = '$' + tipPerPersonFixedAt2;
     }
 }

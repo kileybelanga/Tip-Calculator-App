@@ -7,7 +7,7 @@ font-size: 24px;
 header{
     display: flex;
     justify-content: center;
-    padding: 10%;
+    padding-bottom: 10%;
 }
 
 body{
@@ -25,6 +25,7 @@ main{
     border-radius: 20px;
     border: 0;
     box-shadow: 2px 2px 2px 1px hsl(189, 41%, 97%);
+    max-width: 900px;
 }
 
 
@@ -33,7 +34,7 @@ main{
     flex:1;
     flex-direction: column;
     justify-content: center;  
-    gap: 40px;
+    gap: 60px;
     margin: 0;
 }
 
@@ -83,6 +84,7 @@ input:focus{
     background-position: left  10px center;
     background-repeat: no-repeat;
     padding-right: 10px;
+    min-height: 55px;
     
 }
 
@@ -91,6 +93,7 @@ input:focus{
     background-position: left  10px center;
     background-repeat: no-repeat;
     padding-right: 10px;
+    min-height: 55px;
 
 }
 
@@ -133,6 +136,9 @@ button:hover{
 
 
 .results{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     flex:1;
     background-color: hsl(183, 100%, 15%);
     border-radius: 20px;  

@@ -19,15 +19,17 @@
   </header> 
   <main>
     <section class="calculator">
-      <label for="bill">Bill</label><br>
-      <input 
+      <div>
+        <label for="bill">Bill</label><br>
+        <input 
         class = "bill-icon"  
         type="number" 
         id="billTotalInput" 
         name="bill"
         placeholder="0"
         min="1"
-      >
+        >
+      </div>
       <div class = calculations>
         <label for =tip>Select Tip %</label><br>
         <div class="percentages">
@@ -107,6 +109,7 @@
           id="perPersonTip"
           data-text="$0.00"
         >
+        $0.00
         </div>
         <div> 
           <h1>Total</h1>
@@ -117,6 +120,7 @@
           id="perPersonTotal" 
           data-text="$0.00"
         >
+        $0.00
         <!-- render her total per person -->
         </div>
       </div>
@@ -126,7 +130,7 @@
       >
       </div>
       <div class = "reset-button">
-        <button id= "reset" >
+        <button id= "reset" type="button">
           RESET
         </button>
       </div>
